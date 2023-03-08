@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444766524213",
+    "project_id": "fir-everything-ca39a",
+    "storage_bucket": "fir-everything-ca39a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444766524213:android:9f392d6865bff1a9c8727c",
+        "android_client_info": {
+          "package_name": "com.example.firebaseeverything"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444766524213-qelg9u17q1a80om0pselpje336291knr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLKXqYYbOYiOvMVGPnBb-1DucvEpn7Gbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444766524213-qelg9u17q1a80om0pselpje336291knr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
