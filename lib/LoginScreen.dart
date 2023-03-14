@@ -28,6 +28,16 @@ class _LoginScreenState extends State<LoginScreen> {
         return true;
       },
       child: Scaffold(
+        appBar: AppBar(
+          systemOverlayStyle:
+              const SystemUiOverlayStyle(statusBarColor: Colors.deepPurple),
+          title: const Center(
+              child: Text(
+            'Login',
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+          )),
+        ),
         body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,13 +55,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             hintText: 'Email',
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                  color: Colors.green.shade900, width: 2.5),
+                              borderSide: const BorderSide(
+                                  color: Colors.deepPurple, width: 2.5),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                  color: Colors.green.shade900, width: 1.5),
+                              borderSide: const BorderSide(
+                                  color: Colors.deepPurple, width: 1.5),
                             ),
                           ),
                           validator: (value) {
@@ -80,13 +90,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             hintText: 'Password',
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                  color: Colors.green.shade900, width: 2.5),
+                              borderSide: const BorderSide(
+                                  color: Colors.deepPurple, width: 2.5),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                  color: Colors.green.shade900, width: 1.5),
+                              borderSide: const BorderSide(
+                                  color: Colors.deepPurple, width: 1.5),
                             ),
                           ),
                         ),
@@ -131,8 +141,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 50,
                   width: 180,
                   decoration: BoxDecoration(
-                      color: Colors.green.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple,
+                  ),
                   child: Center(
                     child: loading
                         ? const CircularProgressIndicator(

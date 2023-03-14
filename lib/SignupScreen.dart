@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebaseeverything/LoginScreen.dart';
 import 'package:firebaseeverything/MainScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'Utils/utils.dart';
 
@@ -13,14 +14,24 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  bool loading = false;
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
+  final formkey = GlobalKey<FormState>();
+  FirebaseAuth auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    bool loading = false;
-    TextEditingController emailcontroller = TextEditingController();
-    TextEditingController passwordcontroller = TextEditingController();
-    final formkey = GlobalKey<FormState>();
-    FirebaseAuth auth = FirebaseAuth.instance;
     return Scaffold(
+      appBar: AppBar(
+        systemOverlayStyle:
+            const SystemUiOverlayStyle(statusBarColor: Colors.deepPurple),
+        title: const Center(
+            child: Text(
+          'Sign Up',
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+        )),
+      ),
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,13 +49,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           hintText: 'Email',
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                color: Colors.green.shade900, width: 2.5),
+                            borderSide: const BorderSide(
+                                color: Colors.deepPurple, width: 2.5),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                color: Colors.green.shade900, width: 1.5),
+                            borderSide: const BorderSide(
+                                color: Colors.deepPurple, width: 1.5),
                           ),
                         ),
                         validator: (value) {
@@ -73,13 +84,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           hintText: 'Password',
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                color: Colors.green.shade900, width: 2.5),
+                            borderSide: const BorderSide(
+                                color: Colors.deepPurple, width: 2.5),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                                color: Colors.green.shade900, width: 1.5),
+                            borderSide: const BorderSide(
+                                color: Colors.deepPurple, width: 1.5),
                           ),
                         ),
                       ),
@@ -122,7 +133,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 50,
                 width: 180,
                 decoration: BoxDecoration(
-                    color: Colors.green.shade900,
+                    color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(10)),
                 child: Center(
                     child: loading
